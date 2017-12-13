@@ -39,6 +39,16 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails'
+  gem 'bootstrap-sass'
+  gem 'cucumber'
+  gem 'responders'
+  gem 'angularjs-rails'
+  gem 'jquery-rails'
+  gem 'jquery-turbolinks'
+  gem 'active_model_serializers'
+  gem 'carrierwave'
+  gem 'devise'
 end
 
 group :development do

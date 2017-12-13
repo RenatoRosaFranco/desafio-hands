@@ -1,0 +1,91 @@
+<% provide :title, 'Home' %>
+
+<%= render partial: 'layouts/header' %>
+
+<div class="jumbotron" id='presenter'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+         <ul class='list-unstyled text-right'>
+           <li><h1>VIDEO</h1></li>
+           <li><h1>MOBILE ADS</h1></li>
+         </ul> <!-- list-unstyled -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- jumbotron -->
+
+<div id='about'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <h1>SOBRE A HANDS</h1>
+          <p>Advertising for Mobile People", o nosso objetivo é sempre
+          possibilitar às marcas as melhores ferramentass e serviços
+          para se comunicar com o publico cada vez mais móvel, multicanal
+          , multi-telas e dificil de ser impactado.</p>
+          <%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %>
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- about -->
+
+<div id='products'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+           <ul class='list-unstyled text-center'>
+              <li><h2>PRODUTOS</h2></li>
+              <li><div></div></li>
+           </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='midia'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+          <li>MIDIA KIT</li>
+          <li><p>Disponibilizamos para você nossa<br>
+          apresentação institucional.</p></li>
+          <li><%= link_to 'DOWNLOAD', '', class: 'btn btn-primary btn-lg top' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='cases'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+           <ul class='list-unstyled text-center'>
+              <li><h2>CASES</h2></li>
+              <li><div></div></li>
+           </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='academy'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <h1>HANDS ACADEMY</h1>
+          <p>Quer entender mais do mundo mobile? O Hands academy
+          foi criado para ajudar tanto as agências e empresas e a
+          entenderem a diferença do desktop e o mobile.Ou seja,
+          que a estratégia de anúncio para desktop e mobile são
+          totalmente diversas desde os formatos, canais até
+          segmentações!</p>
+          <%= link_to 'Contrate aqui', '#', class: 'btn btn-primary btn-lg top' %>
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- academy -->
+
+<%= render partial: 'layouts/footer' %>
