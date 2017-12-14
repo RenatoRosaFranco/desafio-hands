@@ -1,10 +1,9 @@
-class Dashboard::CasesController < ApplicationController
+class Dashboard::CasesController < Dashboard::HomeController
 
   etag{}
   layout 'dashboard'
   before_action :set_case, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :exception
-
   respond_to :html, :json, :js
 
   def index
@@ -26,6 +25,7 @@ class Dashboard::CasesController < ApplicationController
 
   def create
     @case = Case.new(case_params)
+    @case.user_id = current_user.id
     @case.save
     respond_with(:dashboard, @case)
   end
@@ -41,7 +41,7 @@ class Dashboard::CasesController < ApplicationController
   end
 
   private
-    def set_dashboard_case
+    def set_case
       @case = Case.find(params[:id])
     end
 

@@ -1,8 +1,7 @@
-class Dashboard::ProductsController < ApplicationController
-
+class Dashboard::ProductsController < Dashboard::HomeController
   etag{}
   layout 'dashboard'
-  before_action :set_product, onyl: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :exception
   respond_to :html, :json, :js
 
@@ -25,6 +24,7 @@ class Dashboard::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user_id = current_user.id
     @product.save
     respond_with(:dashboard, @product)
   end

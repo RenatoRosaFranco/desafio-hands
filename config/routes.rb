@@ -1,22 +1,11 @@
 Rails.application.routes.draw do
 
-  namespace :dashboard do
-    resources :users
-  end
-  namespace :dashboard do
-    resources :products
-  end
-  namespace :dashboard do
-    resources :cases
-  end
-  namespace :dashboard do
-    get 'home/index'
-  end
-
   # Authentication
+  # @implemented
   devise_for :users
 
   # Dashboard
+  # @implemented
   namespace :dashboard do
     get '/', to: "home#index"
     resources :products
@@ -25,8 +14,10 @@ Rails.application.routes.draw do
   end
 
   # Application
+  # @implemented
   root to: 'home#index'
-  resources :cases, only: [:index]
-  resources :products, only: [:index]
+  resources :cases, only: [:index],    via: :GET
+  resources :products, only: [:index], via: :GET
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

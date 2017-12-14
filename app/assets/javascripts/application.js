@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require rails-ujs
 //= require turbolinks
 //= requrie jquery.turbolinks
@@ -25,11 +26,7 @@ app.controller('ApplicationController', function(){
 
 app.controller('ProductController', function($http,   $log){
 
-    this.products = [{
-      logo: 'renato.jpg',
-      name: 'A Product',
-      description: 'A simple product'
-   }];
+    this.products =
 
 });
 

@@ -2,7 +2,7 @@
 
 <h1>Dashboard Users</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Email</th>
@@ -18,9 +18,9 @@
         <td><%= user.email %></td>
         <td><%= user.password %></td>
         <td><%= user.password_confirmation %></td>
-        <td><%= link_to 'Show', dashboard_user %></td>
-        <td><%= link_to 'Edit', edit_dashboard_user_path(dashboard_user) %></td>
-        <td><%= link_to 'Destroy', dashboard_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [:dashboard, user] %></td>
+        <td><%= link_to 'Edit', edit_dashboard_user_path(user) %></td>
+        <td><%= link_to 'Destroy', [:dashboard, user], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

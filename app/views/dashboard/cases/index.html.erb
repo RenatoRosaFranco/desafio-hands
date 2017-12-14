@@ -2,7 +2,7 @@
 
 <h1>Dashboard Cases</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Logo</th>
@@ -16,17 +16,17 @@
   </thead>
 
   <tbody>
-    <% @dashboard_cases.each do |dashboard_case| %>
+    <% @cases.each do |client| %>
       <tr>
-        <td><%= dashboard_case.logo %></td>
-        <td><%= dashboard_case.name %></td>
-        <td><%= dashboard_case.description %></td>
-        <td><%= dashboard_case.link %></td>
-        <td><%= dashboard_case.slug %></td>
-        <td><%= dashboard_case.tags %></td>
-        <td><%= link_to 'Show', dashboard_case %></td>
-        <td><%= link_to 'Edit', edit_dashboard_case_path(dashboard_case) %></td>
-        <td><%= link_to 'Destroy', dashboard_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= client.logo %></td>
+        <td><%= client.name %></td>
+        <td><%= client.description %></td>
+        <td><%= client.link %></td>
+        <td><%= client.slug %></td>
+        <td><%= client.tags %></td>
+        <td><%= link_to 'Show', [:dashboard, client] %></td>
+        <td><%= link_to 'Edit', edit_dashboard_case_path(client) %></td>
+        <td><%= link_to 'Destroy', [:dashboard, client], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

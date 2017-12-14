@@ -1,29 +1,61 @@
-<h2>Sign up</h2>
+<% provide :title, "Sign Up" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12'>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+      <div class='col-md-4 col-md-offset-4'>
+      <h2>Sign up</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+           <%= f.label :name %>
+           <div class='input-group'>
+           <div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
+           <%= f.text_field :name, class: 'form-control', required: 'required', placeholder:
+           'Digite o nome', autocomplete:'off', autofocus: true %>
+           </div>
+        </div>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <div class='input-group'>
+          <div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
+          <%= f.email_field :email, class: 'form-control', required: 'required',
+          placeholder: 'Digite p e-mail', autocomplete: 'off' %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <div class='input-group'>
+          <div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
+          <%= f.password_field :password, class: 'form-control', required: 'required',
+          placeholder: 'Digite a senha', autocomplete: "off" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <div class='input-group'>
+          <div class='input-group-addon'><i class='glyphicon glyphicon-search'></i></div>
+          <%= f.password_field :password_confirmation, class: 'form-control',
+          required: 'requierd', placeholder: 'Confirme a senha', autocomplete: "off" %>
+          </div>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: 'btn btn-primary btn-lg top' %>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

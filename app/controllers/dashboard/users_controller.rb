@@ -1,8 +1,9 @@
-class Dashboard::UsersController < ApplicationController
+class Dashboard::UsersController < Dashboard::HomeController
+
   etag{}
   layout 'dashboard'
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  rescue_from ActoveRecord::RecordNotFound, with: :exception
+  rescue_from ActiveRecord::RecordNotFound, with: :exception
   respond_to :html, :json, :js
 
   def index
@@ -11,12 +12,12 @@ class Dashboard::UsersController < ApplicationController
   end
 
   def show
-    respond_with(@dashboard_user)
+    respond_with(@user)
   end
 
   def new
-    @dashboard_user = Dashboard::User.new
-    respond_with(@dashboard_user)
+    @user = User.new
+    respond_with(@user)
   end
 
   def edit
@@ -44,6 +45,6 @@ class Dashboard::UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:avatar, :name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:avatar, :name, :email, :password, :password_confirmation, :admin)
     end
 end

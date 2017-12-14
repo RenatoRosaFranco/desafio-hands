@@ -1,15 +1,6 @@
 <%= form_for([:dashboard, @case]) do |form| %>
-  <% if @case.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
 
-      <ul>
-      <% @case.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= has_errors? @case %>
 
   <div class="field">
     <%= form.label :logo %>
@@ -18,8 +9,11 @@
 
   <div class="field">
     <%= form.label :name %>
+    <div class='input-group'>
+    <div class='input-group-addon'><%= fa_icon "tag" %></div>
     <%= form.text_field :name, class: 'form-control', required: 'required',
     placeholder: 'Digite o nome', autocomplete: 'off' %>
+    </div>
   </div>
 
   <div class="field">
@@ -30,14 +24,20 @@
 
   <div class="field">
     <%= form.label :link %>
+    <div class='input-group'>
+    <div class='input-group-addon'><%= fa_icon "tag" %></div>
     <%= form.text_field :link, class: 'form-control', required: 'required',
     placeholder: 'Digite o link', autocomplete: 'off' %>
+    </div>
   </div>
 
   <div class="field">
     <%= form.label :tags %>
+    <div class='input-group'>
+    <div class='input-group-addon'><%= fa_icon "tag" %></div>
     <%= form.text_field :tags, class: 'form-control', required: 'required',
     placeholder:'Digite as tags', autocomplete: 'off' %>
+    </div>
   </div>
 
   <div class="actions">

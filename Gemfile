@@ -38,26 +38,54 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  # Use shoulda to made tests mode understable
+  gem 'shoulda'
+  # Use selenium as webdriver
   gem 'selenium-webdriver'
+  # Use rspec-rails as test-framework
   gem 'rspec-rails'
+  # Use bootstrap-sass as bootstrap
   gem 'bootstrap-sass'
-  gem 'cucumber'
+  # Use responders as respond-format
   gem 'responders'
+  # Use angularjs-rails as angularjs 1x.
   gem 'angularjs-rails'
+  # Use jquery-rails as jquery
   gem 'jquery-rails'
+  # Use jquery-turbolinks to fix issues
   gem 'jquery-turbolinks'
+  # Use active_model_serializers to serialize data
   gem 'active_model_serializers'
+  # Use carrierwave as file uploader
   gem 'carrierwave'
+  # Use devise as authentication
   gem 'devise'
+  # Use pundit as authorization
   gem 'pundit'
+  # Use faker to generate fake data
   gem 'ffaker'
+  # Use factory_girl_rails to bulild factories
   gem 'factory_girl_rails'
+  # Use database_cleaner to clean database
+  gem 'database_cleaner'
+  # Use pry-rails as pry-terminal
+  # Use therubyracer as javascript plataform --if none nodejs
+  # gem 'therubyracer'
   gem 'pry-rails'
+  # Use pry-byebug as debugger
   gem 'pry-byebug'
+  # Use awesome print to awesome code display
   gem 'awesome_print'
+  # Use font-awesome-rails as fonts
   gem 'font-awesome-rails'
+  # Use simplecov as code coverage
   gem 'simplecov'
+  # Use rails_best_practices as best practices
   gem 'rails_best_practices'
+  # Use better_errors as better_errors
+  gem 'better_errors'
+  # Use rails-erd to generate pdf of MER architeture
+  gem 'rails-erd'
 end
 
 group :development do
