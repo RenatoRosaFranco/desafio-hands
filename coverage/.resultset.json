@@ -523,8 +523,15 @@
         1,
         1,
         null
+      ],
+      "/home/renato/Área de Trabalho/hands/db/migrate/20171214161910_add_column_admin_to_users.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1513268181
+    "timestamp": 1513268355
   }
 }
