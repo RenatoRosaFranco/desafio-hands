@@ -57,6 +57,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'font-awesome-rails'
   gem 'simplecov'
+  gem 'rails_best_practices'
 end
 
 group :development do
