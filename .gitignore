@@ -20,4 +20,6 @@
 /node_modules
 /yarn-error.log
 
+# ignore all simplecov coverge
+/.coverage
 .byebug_history

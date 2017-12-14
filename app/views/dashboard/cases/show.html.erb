@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @case.logo %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @case.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @case.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @case.link %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @case.tags %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_case_path(@case) %> |
+<%= link_to 'Back', dashboard_cases_path %>

@@ -49,6 +49,14 @@ group :development, :test do
   gem 'active_model_serializers'
   gem 'carrierwave'
   gem 'devise'
+  gem 'pundit'
+  gem 'ffaker'
+  gem 'factory_girl_rails'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'awesome_print'
+  gem 'font-awesome-rails'
+  gem 'simplecov'
 end
 
 group :development do

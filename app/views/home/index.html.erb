@@ -30,14 +30,51 @@
   </div><!-- container -->
 </div><!-- about -->
 
-<div id='products'>
+<div id='links'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-           <ul class='list-unstyled text-center'>
+         <ul class='list-inline text-center'>
+            <li><%= link_to 'Experience', '#' %></li>
+            <li><%= link_to 'Inovation', '#' %></li>
+            <li><%= link_to 'Aplications', '#' %></li>
+            <li><%= link_to 'Mobile', '#' %></li>
+         </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='products' ng-controller='ProductController as productCtrl'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class='col-md-4 col-md-offset-4'>
+          <ul class='list-unstyled text-center'>
               <li><h2>PRODUTOS</h2></li>
               <li><div></div></li>
-           </ul>
+           </ul><!-- list-unstyled -->
+         </div>
+
+         <div class='col-md-12'>
+          <div class='col-md-3 col-sm-4' ng-repeat='product in productCtrl.products'>
+             <div class="panel panel default padding">
+                 <ul class='list-unstyled'>
+                    <li><img ng-src="{{ product.logo }}"></img></li>
+                    <li><h2>{{ product.name }}</h1></li>
+                    <li>{{ product.description }}</li>
+                 </ul>
+             </div>
+          </div>
+        </div>
+
+        <div class='col-md-12'>
+          <div class='text-center'>
+           <%= link_to 'Carrgar Mais', '', class: 'btn btn-primary btn-lg top' %>
+         </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -48,7 +85,7 @@
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
-          <li>MIDIA KIT</li>
+          <li><h2>MIDIA KIT</h2></li>
           <li><p>Disponibilizamos para você nossa<br>
           apresentação institucional.</p></li>
           <li><%= link_to 'DOWNLOAD', '', class: 'btn btn-primary btn-lg top' %></li>
@@ -58,7 +95,7 @@
   </div>
 </div>
 
-<div id='cases'>
+<div id='cases' ng-controller='CaseController as caseCtrl'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -66,7 +103,42 @@
               <li><h2>CASES</h2></li>
               <li><div></div></li>
            </ul>
+
+          <div class="col-md-4" ng-repeat='case in caseCtrl.cases'>
+            <div class="panel panel-default padding">
+               <ul class='list-unstyled'>
+                   <li><img ng-src="{{ case.logo }}"></li>
+                   <li><h2>{{ case.name }}</h2></li>
+                   <li><p>{{ case.description }}</p></li>
+               </ul>
+            </div>
+          </div>
+
       </div>
+    </div>
+  </div>
+</div>
+
+<div id='anouncements'>
+  <div class="container">
+    <div class="row">
+      <ul class='list-unstyled text-center'>
+         <li><h1>ANUNCIANTES</h1></li>
+         <li><p>Sua campanha em um unico lugar.</p></li>
+         <li><%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id='publishers'>
+  <div class="container">
+    <div class="row">
+      <ul class='list-unstyled text-center'>
+         <li><h1>PUBLISHERS</h1></li>
+         <li><p>Somos uma rede premium.</p></li>
+         <li><%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -82,10 +154,25 @@
           que a estratégia de anúncio para desktop e mobile são
           totalmente diversas desde os formatos, canais até
           segmentações!</p>
-          <%= link_to 'Contrate aqui', '#', class: 'btn btn-primary btn-lg top' %>
+          <%= link_to 'Contrate aqui!', '#', class: 'btn btn-primary btn-lg top' %>
       </div><!-- col-md-12 -->
     </div><!-- row -->
   </div><!-- container -->
 </div><!-- academy -->
+
+<div id='help'>
+  <div class="containter">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+            <li><i class='glyphicon glyphicon-search'></i></li>
+            <li><p>Tire suas duvidas com a nossa<br>
+            equipe especializada em mobile</p></li>
+            <li><%= link_to 'Converse com a gente', '#', class: 'btn btn-primary btn-lg' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render partial: 'layouts/footer' %>

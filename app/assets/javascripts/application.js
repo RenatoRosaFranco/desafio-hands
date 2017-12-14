@@ -15,9 +15,30 @@
 //= require turbolinks
 //= requrie jquery.turbolinks
 //= require angular
+//= require angular-animate
+//= require angular-resource
 //= require_tree .
 
 var app = angular.module('app', []);
 app.controller('ApplicationController', function(){
-  
+});
+
+app.controller('ProductController', function($http,   $log){
+
+    this.products = [{
+      logo: 'renato.jpg',
+      name: 'A Product',
+      description: 'A simple product'
+   }];
+
+});
+
+app.controller('CaseController', function($http){
+
+    this.cases = [{
+      logo: 'renato.jpg',
+      name: 'A Product',
+      description: 'A simple product'
+   }];
+
 });

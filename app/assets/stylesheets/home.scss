@@ -1,3 +1,207 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home
+{
+   .navbar-default
+   {
+     background-color: #435060;
+     border: 1px solid #435060;
+   }
+
+   .navbar-brand
+   {
+     position: relative;
+     color: #c6d202 !important;
+   }
+
+   font-size: 16px;
+   color: #435060;
+   position: relative;
+
+  .top { margin-top: 10px; }
+  .padding { padding: 10px; }
+
+  #presenter
+  {
+    position: relative;
+    background-color: #435060;
+
+    h1
+    {
+      color: #FFF;
+      background-color: #c6d202;
+    }
+
+  }
+
+  #about
+  {
+    position: relative;
+    h1
+    {
+      color: #c6d202;
+      text-transform: uppercase;
+    }
+    a
+    {
+      position: relative;
+      background-color: #435060;
+      border: 1px solid #435060;
+      color: #FFF;
+      border-radius: 0px !important;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  #links
+  {
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #c6d202;
+    a
+    {
+      color: #FFF;
+      padding-top: 10px;
+    }
+  }
+
+  #products
+  {
+    position: relative;
+    h2
+    {
+      position: relative;
+      font-weight: bold;
+      border-bottom: 4px solid #c6d202;
+    }
+    a
+    {
+      position: relative;
+      background-color: #435060;
+      border: 1px solid #435060;
+      color: #FFF;
+      border-radius: 0px !important;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  #midia
+  {
+    position: relative;
+    background-color: #c7d401;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    a
+    {
+      position: relative;
+      background-color: inherit;
+      color: #FFF;
+      border: 1px solid #FFF;
+      border-radius: 0px !important;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+  }
+
+  #academy
+  {
+    position: relative;
+    margin-bottom: 10px;
+    color: #767f88;
+
+    h1
+    {
+      color: #c7d401;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    a
+    {
+      position: relative;
+      background-color: #435060;
+      border: 1px solid #435060;
+      color: #FFF;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 0px !important;
+    }
+
+  }
+
+  #publishers, #anouncements
+  {
+    position: relative;
+    background-color: #e2e2e2;
+    color: #788188;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    a
+    {
+      border: 1px solid #435060;
+      background-color: #435060;
+      color: #FFF;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 0px !important;
+    }
+  }
+
+  #help
+  {
+    background-color: #c7d401;
+    color: #424f60;
+    margin-bottom: 10px;
+    padding-top: 15px;
+
+    a
+    {
+      position: relative;
+      background-color: inherit;
+      border: 1px solid #FFF;
+      color: #FFF;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 0px !important;
+      font-size: 14px;
+    }
+
+  }
+
+  footer
+  {
+    padding-top: 30px;
+    position: relative;
+    background-color: #435060;
+    color: #c7cbce;
+
+    .social-box
+    {
+      position: relative;
+      background-color: #242e3a;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      i
+      {
+        position: relative;
+        font-size: 29px;
+        color: #FFF;
+        padding-top: 8px;
+      }
+
+    }
+
+  }
+
+}
