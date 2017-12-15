@@ -6,13 +6,6 @@ class Case < ApplicationRecord
   mount_uploader :logo, FileUploader
   belongs_to :user
 
-  validates :logo,
-            presence: false,
-            format: {
-              with: /\.(jpg|jpeg|png|bmp)$/,
-              multiline: true
-            }
-
   validates :name,
             presence: true,
             uniqueness: false,
@@ -35,10 +28,4 @@ class Case < ApplicationRecord
             uniqueness: false,
             allow_blank: false,
             length: { minimum: 3, maximum: 65 }
-
-  validates :user_id,
-            presence: true,
-            uniqueness: false,
-            allow_blank: false,
-            numericality: { only_integer: true }
 end

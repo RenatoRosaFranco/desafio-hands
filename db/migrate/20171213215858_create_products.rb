@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :slug
       t.string :tags
       t.references :user, foreign_key: true
-
       t.timestamps
     end
   end

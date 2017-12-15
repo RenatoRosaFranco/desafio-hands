@@ -2,16 +2,9 @@
 class Product < ApplicationRecord
   self.table_name = 'products'
   self.primary_key = 'id'
-
+  
   mount_uploader :logo, FileUploader
   belongs_to :user
-
-  validates :logo,
-            presence: false,
-            format: {
-              with: /\.(jpg|bmp|png|jpeg)$/,
-              multiline: true
-            }
 
   validates :name,
             presence: true,
@@ -35,5 +28,5 @@ class Product < ApplicationRecord
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            numericality: { only_integer: true }
+            numericality: {only_integer: true}
 end
