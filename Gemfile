@@ -86,6 +86,8 @@ group :development, :test do
   gem 'rails_best_practices'
   # Use better_errors as better_errors
   gem 'better_errors'
+  # Use jasmeine as javascript test-framework
+  gem 'jasmine'
   # Use rails-erd to generate pdf of MER architeture
   gem 'rails-erd'
 end

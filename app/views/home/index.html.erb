@@ -106,9 +106,7 @@
            <ul class='list-unstyled text-center'>
               <li><h2>CASES</h2></li>
               <li><div></div></li>
-           </ul>
-
-           {{ caseCtrl.cases }}
+          </ul>
 
           <div class="col-md-4" ng-repeat='case in caseCtrl.cases'>
             <div class="panel panel-default padding">
@@ -117,6 +115,14 @@
                    <li><h2>{{ case.name }}</h2></li>
                    <li><p>{{ case.description }}</p></li>
                </ul>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='col-md-12'>
+              <div class='text-center'>
+               <%= link_to 'Carregar Mais', '', class: 'btn btn-primary btn-lg top' %>
+             </div>
             </div>
           </div>
 

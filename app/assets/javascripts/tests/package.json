@@ -1,0 +1,24 @@
+{
+  "name": "mocha",
+  "version": "5.6.0",
+  "description": "Javascript test framework",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mocha",
+    "unit",
+    "test"
+  ],
+  "author": "MIT",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mochajs/mocha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mochajs/mocha/issues"
+  },
+  "homepage": "https://github.com/mochajs/mocha#readme"
+}

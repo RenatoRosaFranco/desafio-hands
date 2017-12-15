@@ -4,6 +4,14 @@
 
 .home
 {
+
+    #logo
+    {
+      position: relative;
+      width: 40px !important;
+      height: 40px;
+    }
+
    .navbar-default
    {
      background-color: #435060;
@@ -65,6 +73,7 @@
   #links
   {
     padding: 10px;
+    padding-top: 20px;
     margin-top: 40px;
     background-color: #c6d202;
     a
@@ -114,14 +123,17 @@
       {
         background-color: #2d3948;
         border: 1px solid #2d3948;
-        cursor: pointer;
         transition: 0.50s;
+        cursor: pointer;
       }
     }
   }
 
   #cases
   {
+    position: relative;
+    margin-bottom: 30px;
+
     .logo
     {
       position: relative;
@@ -129,6 +141,23 @@
       height: 164px;
     }
 
+    a
+    {
+      border: 1px solid  #c7d401;
+      background-color: #FFF;
+      color: #c7d401;
+      border-radius: 0px !important;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+        position: relative;
+        background-color: #c7d401;
+        color: #FFF;
+        transition: 0.50s;
+      }
+    }
   }
 
   #midia
