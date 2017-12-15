@@ -28,10 +28,16 @@
     position: relative;
     background-color: #435060;
 
-    h1
+    .border
     {
-      color: #FFF;
+      position: relative;
       background-color: #c6d202;
+      float: right;
+      margin-bottom: 5px;
+      h1
+      {
+        color: #FFF;
+      }
     }
 
   }
@@ -71,6 +77,23 @@
   #products
   {
     position: relative;
+
+
+    .logo
+    {
+      position: relative;
+      width: 194px;
+      height: 164px;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+        position: relative;
+        opacity: 0.70;
+        transition: 0.50s;
+      }
+
+    }
+
     h2
     {
       position: relative;
@@ -86,7 +109,26 @@
       border-radius: 0px !important;
       text-transform: uppercase;
       font-weight: bold;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+        background-color: #2d3948;
+        border: 1px solid #2d3948;
+        cursor: pointer;
+        transition: 0.50s;
+      }
     }
+  }
+
+  #cases
+  {
+    .logo
+    {
+      position: relative;
+      width: 164px;
+      height: 164px;
+    }
+
   }
 
   #midia
@@ -107,6 +149,16 @@
       border-radius: 0px !important;
       text-transform: uppercase;
       font-weight: bold;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+       position: relative;
+       color: #c7d401;
+       background-color: #FFF;
+       border: 1px solid #FFF;
+       cursor: pointer;
+       transition: 0.50s
+      }
     }
 
   }
@@ -133,6 +185,14 @@
       text-transform: uppercase;
       font-weight: bold;
       border-radius: 0px !important;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+        background-color: #2d3948;
+        border: 1px solid #2d3948;
+        cursor: pointer;
+        transition: 0.50s;
+      }
     }
 
   }
@@ -153,6 +213,14 @@
       font-weight: bold;
       text-transform: uppercase;
       border-radius: 0px !important;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+        background-color: #2d3948;
+        border: 1px solid #2d3948;
+        cursor: pointer;
+        transition: 0.50s;
+      }
     }
   }
 
@@ -173,6 +241,16 @@
       font-weight: bold;
       border-radius: 0px !important;
       font-size: 14px;
+      transition: 0.50s;
+      &:hover, &.over
+      {
+        position: relative;
+        background-color: #FFF;
+        color: #c7d401;
+        border: 1px solid #FFF;
+        cursor: pointer;
+        transition: 0.50s;
+      }
     }
 
   }

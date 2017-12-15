@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   # Application
   # @implemented
   root to: 'home#index'
-  resources :cases, only: [:index],    via: :GET
-  resources :products, only: [:index], via: :GET
+  resources :cases, only: [:index] 
+  resources :products, only: [:index]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

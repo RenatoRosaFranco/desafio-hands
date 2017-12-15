@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% content_for :js %>
+  toastr.info("<%= notice %>")
+<% end %>
 
 <p>
   <strong>Logo:</strong>

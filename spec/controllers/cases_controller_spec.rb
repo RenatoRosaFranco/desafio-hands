@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe CasesController, type: :controller do
-
-  describe "GET #index" do
-    it "returns http success" do
-      get :index
+  describe 'GET #index' do
+    it 'returns http success' do
+      get :index, method: :get
+      binding.pry
       expect(response).to have_http_status(:success)
     end
   end
-
 end

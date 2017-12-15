@@ -78,6 +78,8 @@ group :development, :test do
   gem 'awesome_print'
   # Use font-awesome-rails as fonts
   gem 'font-awesome-rails'
+  # Use toastr-rails as notifications
+  gem 'toastr-rails'
   # Use simplecov as code coverage
   gem 'simplecov'
   # Use rails_best_practices as best practices

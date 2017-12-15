@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require toastr
 //= require bootstrap
 //= require rails-ujs
 //= require turbolinks
@@ -24,18 +25,38 @@ var app = angular.module('app', []);
 app.controller('ApplicationController', function(){
 });
 
-app.controller('ProductController', function($http,   $log){
 
-    this.products =
+/* ProductController */
+app.controller('ProductController', ['$http', '$scope', function($http, $scope){
 
-});
+    var store = this;
+    store.products = [];
 
-app.controller('CaseController', function($http){
+    $http({
+      url: 'http://localhost:3000/products.json',
+      method: 'GET'
+    }).then(function (response) {
+      store.products = response.data;
+    }).then(function (error) {
+      console.log(error);
+    });
 
-    this.cases = [{
-      logo: 'renato.jpg',
-      name: 'A Product',
-      description: 'A simple product'
-   }];
+} ]);
+
+/* CaseController */
+app.controller('CaseController', function($http, $scope){
+
+    var store = this;
+    store.cases = [];
+
+    $http({
+      url: 'http://localhost:3000/cases.json',
+      method: 'GET',
+  }).then(function (response){
+      store.cases = response.data;
+      console.log(response);
+  }).then(function (error){
+      console.log(error);
+  });
 
 });

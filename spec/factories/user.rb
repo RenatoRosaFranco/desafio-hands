@@ -5,4 +5,11 @@ FactoryGirl.define do
     password "123456"
     password_confirmation "123456"
   end
+  factory :admin, parent:  :user do
+    name "Jorge Silveira"
+    email "jorge.silveira@hands.com.br"
+    password "123456"
+    password_confirmation "123456"
+    admin true
+  end
 end

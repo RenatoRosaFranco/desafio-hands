@@ -7,8 +7,8 @@
     <div class="row">
       <div class="col-md-12">
          <ul class='list-unstyled text-right'>
-           <li><h1>VIDEO</h1></li>
-           <li><h1>MOBILE ADS</h1></li>
+           <li><div class='border'><h1>VIDEO</h1></div></li>
+           <li><div class='border'><h1>MOBILE ADS</h1></div></li>
          </ul> <!-- list-unstyled -->
       </div><!-- col-md-12 -->
     </div><!-- row -->
@@ -57,23 +57,27 @@
            </ul><!-- list-unstyled -->
          </div>
 
+        <div class='row' style='margin-top:30px;'>
          <div class='col-md-12'>
           <div class='col-md-3 col-sm-4' ng-repeat='product in productCtrl.products'>
              <div class="panel panel default padding">
                  <ul class='list-unstyled'>
-                    <li><img ng-src="{{ product.logo }}"></img></li>
+                    <li><img ng-src="{{ product.logo.url }}" class='logo'></li>
                     <li><h2>{{ product.name }}</h1></li>
                     <li>{{ product.description }}</li>
                  </ul>
              </div>
           </div>
         </div>
+      </div>
 
+      <div class='row'>
         <div class='col-md-12'>
           <div class='text-center'>
-           <%= link_to 'Carrgar Mais', '', class: 'btn btn-primary btn-lg top' %>
+           <%= link_to 'Carregar Mais', '', class: 'btn btn-primary btn-lg top' %>
          </div>
         </div>
+      </div>
 
       </div>
     </div>
@@ -104,10 +108,12 @@
               <li><div></div></li>
            </ul>
 
+           {{ caseCtrl.cases }}
+
           <div class="col-md-4" ng-repeat='case in caseCtrl.cases'>
             <div class="panel panel-default padding">
                <ul class='list-unstyled'>
-                   <li><img ng-src="{{ case.logo }}"></li>
+                   <li><img ng-src="{{ case.logo.url }}" class='logo'></li>
                    <li><h2>{{ case.name }}</h2></li>
                    <li><p>{{ case.description }}</p></li>
                </ul>
@@ -161,7 +167,7 @@
 </div><!-- academy -->
 
 <div id='help'>
-  <div class="containter">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
