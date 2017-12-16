@@ -24,8 +24,7 @@ class Dashboard::CasesController < Dashboard::HomeController
   end
 
   def create
-    @case = Case.new(case_params)
-    @case.user_id = current_user.id
+    @case = current_user.cases.build(case_params)
     @case.save
     respond_with(:dashboard, @case)
   end

@@ -1,12 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe ProductsController, type: :controller do
+  describe 'GET #index' do
+    before { @user = FactoryGirl.create(:user) }
+    let!(:products) { FactoryGirl.create(:product, user: @user) }
+    before { get :index, method: "GET" }
 
-  describe "GET #index" do
-    it "returns http success" do
-      get :index
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
+    it 'return all products' do
+      body = JSON.parse(response.body)
+      expect(body.size).to eq(1)
+    end
   end
-
 end

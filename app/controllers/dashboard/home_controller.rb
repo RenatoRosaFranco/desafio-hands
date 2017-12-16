@@ -1,6 +1,6 @@
 class Dashboard::HomeController < ApplicationController
   layout 'dashboard'
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
   end
 end

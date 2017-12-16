@@ -84,6 +84,8 @@ group :development, :test do
   gem 'simplecov'
   # Use rails_best_practices as best practices
   gem 'rails_best_practices'
+  # Use 'rails-controller-testing' to assings
+  gem 'rails-controller-testing'
   # Use better_errors as better_errors
   gem 'better_errors'
   # Use jasmeine as javascript test-framework

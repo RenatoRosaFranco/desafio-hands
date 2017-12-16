@@ -23,8 +23,7 @@ class Dashboard::ProductsController < Dashboard::HomeController
   end
 
   def create
-    @product = Product.new(product_params)
-    @product.user_id = current_user.id
+    @product = current_user.products.build(product_params)
     @product.save
     respond_with(:dashboard, @product)
   end

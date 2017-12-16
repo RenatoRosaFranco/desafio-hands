@@ -57,6 +57,7 @@
            </ul><!-- list-unstyled -->
          </div>
 
+
         <div class='row' style='margin-top:30px;'>
          <div class='col-md-12'>
           <div class='col-md-3 col-sm-4' ng-repeat='product in productCtrl.products'>
@@ -65,11 +66,18 @@
                     <li><img ng-src="{{ product.logo.url }}" class='logo'></li>
                     <li><h2>{{ product.name }}</h1></li>
                     <li>{{ product.description }}</li>
-                 </ul>
-             </div>
-          </div>
-        </div>
-      </div>
+                 </ul><!-- list-unstyled -->
+             </div><!-- panel panel-default -->
+          </div><!-- col-md-3 -->
+        </div><!-- col-md-12 -->
+
+        <div ng-if="productCtrl.products.length == 0" class="col-md-12">
+             <div class="well">
+                <p class='text-center'>Nenhum produto encontrado.</p>
+             </div><!-- well -->
+        </div><!-- col-md-12 -->
+
+      </div><!-- row -->
 
       <div class='row'>
         <div class='col-md-12'>
@@ -117,6 +125,12 @@
                </ul>
             </div>
           </div>
+
+          <div ng-if="caseCtrl.products.length == 0" class="col-md-12">
+               <div class="well">
+                  <p class='text-center'>Nenhum produto encontrado.</p>
+               </div><!-- well -->
+          </div><!-- col-md-12 -->
 
           <div class='row'>
             <div class='col-md-12'>

@@ -14,7 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-
+ 
   # Configuration for Rspec suite
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
