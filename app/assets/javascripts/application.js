@@ -33,7 +33,7 @@ app.controller('ProductController', ['$http', '$scope', function($http, $scope){
     store.products = [];
 
     $http({
-      url: 'http://localhost:3000/products.json',
+      url: 'http://api.hands-dev.com.br:3000/api/v1/products',
       method: 'GET'
     }).then(function (response) {
       store.products = response.data;
@@ -50,7 +50,7 @@ app.controller('CaseController', function($http, $scope){
     store.cases = [];
 
     $http({
-      url: 'http://localhost:3000/cases.json',
+      url: 'http://api.hands-dev.com.br:3000/api/v1/cases',
       method: 'GET',
   }).then(function (response){
       store.cases = response.data;

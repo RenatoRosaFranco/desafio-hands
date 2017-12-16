@@ -14,6 +14,12 @@ RSpec.describe Case do
      subject.name = nil
      expect(subject).not_to be_valid
     end
+    it 'attributes should be present'  do
+      should validate_presence_of :name
+      should validate_presence_of :description
+      should validate_presence_of :link
+      should validate_presence_of :tags
+    end
   end
   context "attibutes" do
     it "should respond to all attributes" do

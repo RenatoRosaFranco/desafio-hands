@@ -1,20 +1,31 @@
 Rails.application.routes.draw do
 
-  # Authentication
-  devise_for :users
+   # API
+   # @implemented
+   namespace :api  do
+     namespace :v1 do
+      resources :cases, only: [:index]
+      resources :products, only: [:index]
+     end
+   end
 
-  default_url_options host: 'http://localhost:3000'
-  # Dashboard
-  namespace :dashboard do
-    get '/', to: "home#index"
-    resources :products
-    resources :cases
-    resources :users
-  end
+   # Authentication
+   # default_url_options host: 'http://localhost:3000'
 
-  # Application
-  root to: 'home#index'
-  resources :cases, only: [:index]
-  resources :products, only: [:index]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+   # Dashboard
+   # @implemented
+   namespace :dashboard do
+     get '/', to: "home#index"
+     resources :products
+     resources :cases
+     resources :users
+   end
+
+   # Application
+   root to: 'home#index'
+
+   # Authentication
+   # @implemented
+   devise_for :users
+
 end
