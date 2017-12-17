@@ -5,12 +5,7 @@
 <div class="jumbotron" id='presenter'>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-         <ul class='list-unstyled text-right'>
-           <li><div class='border'><h1>VIDEO</h1></div></li>
-           <li><div class='border'><h1>MOBILE ADS</h1></div></li>
-         </ul> <!-- list-unstyled -->
-      </div><!-- col-md-12 -->
+    </div>
     </div><!-- row -->
   </div><!-- container -->
 </div><!-- jumbotron -->
@@ -19,13 +14,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-
-          <h1>SOBRE A HANDS</h1>
-          <p>Advertising for Mobile People", o nosso objetivo é sempre
-          possibilitar às marcas as melhores ferramentass e serviços
-          para se comunicar com o publico cada vez mais móvel, multicanal
-          , multi-telas e dificil de ser impactado.</p>
-          <%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %>
+        <div class='col-md-6 col-md-offset-3'>
+          <ul class='list-unstyled'>
+            <li><h1>SOBRE A HANDS</h1></li>
+            <li><p>"Advertising for Mobile People", o nosso objetivo é sempre
+            possibilitar às marcas as melhores ferramentass e serviços
+            para se comunicar com o publico cada vez mais móvel, multicanal
+            ,multi-telas e dificil de ser impactado.</p></li>
+            <li><%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %></li>
+          </ul><!-- list-unstyled -->
+        </div><!-- col-md-6 col-md-offset-3 -->
       </div><!-- col-md-12 -->
     </div><!-- row -->
   </div><!-- container -->
@@ -35,16 +33,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-         <ul class='list-inline text-center'>
+         <ul class='list-inline text-center breadcrumb'>
             <li><%= link_to 'Experience', '#' %></li>
             <li><%= link_to 'Inovation', '#' %></li>
             <li><%= link_to 'Aplications', '#' %></li>
             <li><%= link_to 'Mobile', '#' %></li>
-         </ul>
-      </div>
-    </div>
-  </div>
-</div>
+         </ul><!-- list-unstyled -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- links -->
 
 <div id='products' ng-controller='ProductController as productCtrl'>
   <div class="container">
@@ -52,70 +50,70 @@
       <div class="col-md-12">
 
         <div class='col-md-4 col-md-offset-4'>
-          <ul class='list-unstyled text-center'>
-              <li><h2>PRODUTOS</h2></li>
-              <li><div></div></li>
-           </ul><!-- list-unstyled -->
-         </div>
+            <ul class='list-unstyled text-center'>
+               <li><h2>PRODUTOS</h2></li>
+               <li><div class='bottom-bar'></div></li>
+            </ul><!-- list-unstyled -->
+         </div><!-- col-md-4 col-md-offset-4 -->
 
-
-        <div class='row' style='margin-top:30px;'>
-         <div class='col-md-12'>
-          <div class='col-md-3 col-sm-4' ng-repeat='product in productCtrl.products'>
-             <div class="panel panel default padding">
+        <div class='row'>
+          <div class='col-md-12' style="margin-top: 20px;">
+            <div class='col-md-3 col-sm-4 col-xs-6'
+               ng-repeat='product in productCtrl.products | limitTo: paginationLimit() '>
+              <div class='product-block'>
                  <ul class='list-unstyled'>
                     <li><img ng-src="{{ product.logo.url }}" class='logo'></li>
-                    <li><h2>{{ product.name }}</h1></li>
-                    <li>{{ product.description }}</li>
+                    <li><p class='text-center'>{{ product.name }}</p></li>
                  </ul><!-- list-unstyled -->
-             </div><!-- panel panel-default -->
-          </div><!-- col-md-3 -->
-        </div><!-- col-md-12 -->
+              </div><!-- panel panel-default -->
+           </div><!-- col-md-3 -->
+          </div><!-- row -->
+        </div>
 
         <div ng-if="productCtrl.products.length == 0" class="col-md-12">
              <div class="well">
                 <p class='text-center'>Nenhum produto encontrado.</p>
              </div><!-- well -->
         </div><!-- col-md-12 -->
-
       </div><!-- row -->
 
-      <div class='row'>
         <div class='col-md-12'>
           <div class='text-center'>
-           <%= link_to 'Carregar Mais', '', class: 'btn btn-primary btn-lg top' %>
-         </div>
-        </div>
-      </div>
-
-      </div>
-    </div>
-  </div>
-</div>
+             <a class='btn btn-primary btn-lg top'
+               ng-show="hasMoreProductsToShow()" ng-click="showMoreProducts()">
+                   Carregar Mais
+               </a>
+          </div><!-- text-center -->
+        </div><!-- col-md-12 -->
+      </div><!-- col-md-4 col-md-offset-4 -->
+    </div><!-- row-->
+  </div><!-- container-->
+</div><!-- products-->
 
 <div id='midia'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
+          <li><%= image_tag('midia-kit.png') %></li>
           <li><h2>MIDIA KIT</h2></li>
           <li><p>Disponibilizamos para você nossa<br>
           apresentação institucional.</p></li>
           <li><%= link_to 'DOWNLOAD', '', class: 'btn btn-primary btn-lg top' %></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+        </ul><!-- list-unstyled -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- midia -->
 
 <div id='cases' ng-controller='CaseController as caseCtrl'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-           <ul class='list-unstyled text-center'>
-              <li><h2>CASES</h2></li>
-              <li><div></div></li>
-          </ul>
+          <ul class='list-unstyled text-center'>
+            <li><h2>CASES</h2></li>
+            <li><div class='bottom-bar'></div></li>
+          </ul><!-- list-unstyled -->
 
           <div class="col-md-4" ng-repeat='case in caseCtrl.cases'>
             <div class="panel panel-default padding">
@@ -123,65 +121,77 @@
                    <li><img ng-src="{{ case.logo.url }}" class='logo'></li>
                    <li><h2>{{ case.name }}</h2></li>
                    <li><p>{{ case.description }}</p></li>
-               </ul>
-            </div>
-          </div>
+               </ul><!-- list-unstyled -->
+            </div><!-- panel panel-default -->
+          </div><!-- col-md-4 -->
 
           <div ng-if="caseCtrl.products.length == 0" class="col-md-12">
-               <div class="well">
-                  <p class='text-center'>Nenhum produto encontrado.</p>
-               </div><!-- well -->
+             <div class="well">
+                <p class='text-center'>Nenhum case encontrado.</p>
+             </div><!-- well -->
           </div><!-- col-md-12 -->
 
-          <div class='row'>
-            <div class='col-md-12'>
-              <div class='text-center'>
-               <%= link_to 'Carregar Mais', '', class: 'btn btn-primary btn-lg top' %>
-             </div>
-            </div>
-          </div>
-
-      </div>
-    </div>
-  </div>
-</div>
+         <div class='row'>
+           <div class='col-md-12'>
+             <div class='text-center'>
+               <%= link_to 'VEJA MAIS CASES', '', class: 'btn btn-primary btn-lg top' %>
+             </div><!-- col-md-12 -->
+          </div><!-- row -->
+        </div>
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- cases -->
 
 <div id='anouncements'>
   <div class="container">
     <div class="row">
-      <ul class='list-unstyled text-center'>
+      <div class='col-md-12'>
+        <ul class='list-unstyled text-center'>
          <li><h1>ANUNCIANTES</h1></li>
+         <li><div class='bottom-bar'></div></li>
          <li><p>Sua campanha em um unico lugar.</p></li>
          <li><%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %></li>
-      </ul>
-    </div>
-  </div>
-</div>
+       </ul><!-- list-unstyled -->
+     </div> <!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- anouncements -->
 
 <div id='publishers'>
   <div class="container">
     <div class="row">
-      <ul class='list-unstyled text-center'>
-         <li><h1>PUBLISHERS</h1></li>
-         <li><p>Somos uma rede premium.</p></li>
-         <li><%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %></li>
-      </ul>
+      <div class='col-md-12'>
+        <div class='col-md-4 col-md-offset-4'>
+       <ul class='list-unstyled text-center'>
+        <li><h1>PUBLISHERS</h1></li>
+        <li><div class='bottom-bar'></div></li>
+        <li><p>Somos uma rede premium.</p></li>
+        <li><%= link_to 'Saiba mais', '#', class: 'btn btn-primary btn-lg top' %></li>
+      </ul><!-- list-unstyled -->
     </div>
-  </div>
-</div>
+    </div><!-- col-md-12 -->
+   </div><!-- row -->
+ </div><!-- container -->
+</div><!-- publishers -->
 
 <div id='academy'>
+  <div id='academy-presenter'></div>
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-          <h1>HANDS ACADEMY</h1>
-          <p>Quer entender mais do mundo mobile? O Hands academy
-          foi criado para ajudar tanto as agências e empresas e a
-          entenderem a diferença do desktop e o mobile.Ou seja,
-          que a estratégia de anúncio para desktop e mobile são
-          totalmente diversas desde os formatos, canais até
-          segmentações!</p>
-          <%= link_to 'Contrate aqui!', '#', class: 'btn btn-primary btn-lg top' %>
+       <div class='col-md-6 col-md-offset-3'>
+        <ul class='list-unstyled'>
+         <li><h2>HANDS ACADEMY</h1></li>
+         <li><p>Quer entender mais do mundo mobile? O Hands academy
+         foi criado para ajudar tanto as agências e empresas e a
+         entenderem a diferença do desktop e o mobile.Ou seja,
+         que a estratégia de anúncio para desktop e mobile são
+         totalmente diversas desde os formatos, canais até
+         <li>segmentações!</p></li>
+         <li><%= link_to 'Contrate aqui!', '#', class: 'btn btn-primary btn-lg top' %></li>
+        <ul><!-- list-unstyled -->
+       </div> <!-- col-md-6 col-md-offset-3 -->
       </div><!-- col-md-12 -->
     </div><!-- row -->
   </div><!-- container -->
@@ -192,14 +202,14 @@
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
-            <li><i class='glyphicon glyphicon-search'></i></li>
-            <li><p>Tire suas duvidas com a nossa<br>
-            equipe especializada em mobile</p></li>
-            <li><%= link_to 'Converse com a gente', '#', class: 'btn btn-primary btn-lg' %></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+          <li><%= image_tag('help.png') %></li>
+          <li><p>Tire suas duvidas com a nossa<br>
+          equipe especializada em mobile</p></li>
+          <li><%= link_to 'Converse com a gente', '#', class: 'btn btn-primary btn-lg' %></li>
+        </ul><!-- list-unstyled -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- help -->
 
 <%= render partial: 'layouts/footer' %>

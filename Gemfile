@@ -69,13 +69,9 @@ group :development, :test do
   # Use database_cleaner to clean database
   gem 'database_cleaner'
   # Use pry-rails as pry-terminal
-  # Use therubyracer as javascript plataform --if none nodejs
-  # gem 'therubyracer'
   gem 'pry-rails'
   # Use pry-byebug as debugger
   gem 'pry-byebug'
-  # Use awesome print to awesome code display
-  gem 'awesome_print'
   # Use font-awesome-rails as fonts
   gem 'font-awesome-rails'
   # Use toastr-rails as notifications
@@ -90,6 +86,10 @@ group :development, :test do
   gem 'better_errors'
   # Use jasmeine as javascript test-framework
   gem 'jasmine'
+  # Use rails-admin as admin
+  gem 'rails_admin'
+  # Use flex-slider-rails as slider
+  gem 'flex-slider-rails'
   # Use rails-erd to generate pdf of MER architeture
   gem 'rails-erd'
 end

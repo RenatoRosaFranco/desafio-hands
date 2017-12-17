@@ -4,7 +4,6 @@
 
 .home
 {
-
     #logo
     {
       position: relative;
@@ -35,17 +34,43 @@
   {
     position: relative;
     background-color: #435060;
+    width: 100%;
+    background: url("banner.png") no-repeat center;
+    margin-top: -20px;
+    height: 326px;
 
-    .border
+    .list-unstyled
     {
       position: relative;
+      bottom: -20px;
+    }
+
+    .video-border
+    {
       background-color: #c6d202;
-      float: right;
-      margin-bottom: 5px;
-      h1
-      {
-        color: #FFF;
+      width: 83px;
+      height: 32px;
+      right: 0px;
+      margin-bottom: 10px;
+     }
+
+     .mobile-border
+     {
+       background-color: #c6d202;
+       width:170px;
+       height: 32px;
+       right: 0px;
+       margin-bottom: 10px;
       }
+
+    h3
+    {
+     padding: -5px;
+     position: relative;
+     color: #FFF;
+     font-weight: bold;
+     margin-top: 4px;
+     padding-right: 4px;
     }
 
   }
@@ -55,8 +80,17 @@
     position: relative;
     h1
     {
-      color: #c6d202;
+      color: rgb(199,211,1);
+      font-family: "Helvetica";
       text-transform: uppercase;
+    }
+    p
+    {
+
+      color: rgb(52,73,85);
+      font-family: "Helvetica-Light";
+      font-weight: normal;
+      text-align: center;
     }
     a
     {
@@ -72,10 +106,37 @@
 
   #links
   {
-    padding: 10px;
-    padding-top: 20px;
+    padding: 0px;
+    padding-top: 13px;
+    padding-bottom: 0px;
     margin-top: 40px;
     background-color: #c6d202;
+    font-size: 14px;
+    height: 41px;
+    font-size: 14px;
+    .list-inline
+    {
+      li
+      {
+       display: inline-block;
+       padding-left: 0px !important;
+       padding-right: 0px !important;
+       margin-left: 0px;
+       margin-right: -2px;
+      }
+    }
+    .breadcrumb
+    {
+      position: relative;
+      font-size: 11px !important;
+      background-color: inherit;
+      padding: 0px;
+      li:before
+      {
+        context: "/ ";
+        color: #FFF !important;
+      }
+    }
     a
     {
       color: #FFF;
@@ -87,13 +148,29 @@
   {
     position: relative;
 
+    .bottom-bar
+    {
+      background-color: #c6d202;
+      margin-top: -10px;
+      margin-left: 71px;
+      height: 5px;
+      width: 125px;
+    }
+
+    .product-block
+    {
+     border: 2px solid #CCC;
+     margin-bottom: 15px;
+    }
 
     .logo
     {
-      position: relative;
-      width: 194px;
-      height: 164px;
+      width: 100%;
+      height: 115px;
+      /* padding: 5px; */
       transition: 0.50s;
+      /* border: 1px solid #CCC; */
+      padding: 21px;
       &:hover, &.over
       {
         position: relative;
@@ -103,11 +180,19 @@
 
     }
 
+    p
+    {
+      margin-bottom: -5px;
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: sans-serif;
+     }
+
     h2
     {
       position: relative;
-      font-weight: bold;
-      border-bottom: 4px solid #c6d202;
+      font-family: 'Helvetica-Bold';
     }
     a
     {
@@ -139,6 +224,15 @@
       position: relative;
       width: 164px;
       height: 164px;
+    }
+
+    .bottom-bar
+    {
+      background-color: #c6d202;
+      margin-top: -10px;
+      margin-left: 121px;
+      height: 5px;
+      width: 76px
     }
 
     a
@@ -194,16 +288,26 @@
 
   #academy
   {
+    background: linear-gradient(#FFF, #CCC);
     position: relative;
+    padding-bottom: 30px;
     margin-bottom: 10px;
     color: #767f88;
 
-    h1
+    #academy-presenter
     {
+      position: relative;
+      background-color: url('academy.png') no-repeat repeat !important;
+      height: 220px;
+    }
+
+    h2
+    {
+      position: relative;
       color: #c7d401;
       font-weight: bold;
       text-transform: uppercase;
-    }
+     }
 
     a
     {
@@ -224,6 +328,32 @@
       }
     }
 
+  }
+
+  #anouncements
+  {
+    .bottom-bar
+    {
+     background-color: #c6d202;
+     margin-top: -1px;
+     margin-bottom: 11px;
+     margin-left: 61px;
+     height: 5px;
+     width: 125px;
+    }
+  }
+
+  #publishers
+  {
+    .bottom-bar
+    {
+     background-color: #c6d202;
+     margin-top: -1px;
+     margin-bottom: 11px;
+     margin-left: 76px;
+     height: 5px;
+     width: 125px;
+    }
   }
 
   #publishers, #anouncements
@@ -257,6 +387,7 @@
   {
     background-color: #c7d401;
     color: #424f60;
+    padding-bottom: 20px;
     margin-bottom: 10px;
     padding-top: 15px;
 
@@ -287,6 +418,7 @@
   footer
   {
     padding-top: 30px;
+    padding-bottom: 15px;
     position: relative;
     background-color: #435060;
     color: #c7cbce;

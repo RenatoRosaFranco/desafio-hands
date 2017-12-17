@@ -13,19 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ // imports
+ // @implemented
  @import  "bootstrap";
  @import  "bootstrap-sprockets";
  @import  "font-awesome";
- @import  "toastr";
 
- .padding
- {
-   position: relative;
-   padding: 10px;
+ // fonts
+ // @implemented
+ @font-face {
+  font-family: 'Helvetica-Light';
+  src: url('<%= asset_path("Helvetica-Light.ttf") %>') format('truetype');
  }
 
- .top
- {
-   position: relative;
-   margin-top: 10px;
+ @font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('<%= asset_path("Helvetica-Bold.ttf") %>');
+ }
+
+
+ .padding {
+  position: relative;
+  padding: 10px;
+ }
+
+ .top {
+  position: relative;
+  margin-top: 10px;
  }

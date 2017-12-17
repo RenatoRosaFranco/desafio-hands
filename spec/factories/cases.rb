@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :case do
-    # logo { Rack::Test::UploadedFile.new(Rails.root.join('spec', 'files', 'logo.jpg'), 'image/jpeg') }
+    logo { Rack::Test::UploadedFile.new(Rails.root.join('spec', 'files', 'logo-default.jpg'), 'image/jpeg') }
     name "CODE7EVEN"
     description "Software House and consultance"
     link "code7even.com"
